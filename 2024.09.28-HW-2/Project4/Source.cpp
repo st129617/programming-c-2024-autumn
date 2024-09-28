@@ -73,8 +73,5 @@ int main(int argc, char* argv)
 		else {
 			printf("Boxes are incomparable");
 		}
-
 	}
-
-
 }

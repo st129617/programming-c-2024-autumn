@@ -11,11 +11,9 @@ int main(int argc, char* argv)
 	scanf_s("%d", &a);
 	scanf_s("%d", &b);
 	scanf_s("%d", &c);
-	
-
 	if (a == 0 && b == 0 && c == 0) 
 	{
-		printf("-1");
+		std::cout << -1;
 	}
 	else if (a == 0) 
 	{
@@ -33,6 +31,7 @@ int main(int argc, char* argv)
 		else 
 		{
 			printf("0");
+			
 		}
 	}
 	else 
