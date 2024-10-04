@@ -3,24 +3,24 @@
 int main(int argc, char* argv[])
 {
 	int n = 0;
-	int count_heads = 0;
-	int count_tails = 0;
+	int bus_h = 437;
 	scanf_s("%d", &n);
-	for (int i = 0; i < n; ++i) {
-		int coin = 0;
-		scanf_s("%d", &coin);
-		if (coin == 1) {
-			count_heads += 1;
-		}
-		else {
-			count_tails += 1;
+	int count_not_ok_bridge = 0;
+
+	for (int i = 1; i <= n; ++i)
+	{
+		int bridge_height = 0;
+		scanf_s("%d", &bridge_height);
+		if (bridge_height <= bus_h) {
+			count_not_ok_bridge = i;
+			break;
 		}
 	}
-	if (count_heads >= count_tails) {
-		printf("%d", count_tails);
+	if (count_not_ok_bridge) {
+		printf("Crash %d", count_not_ok_bridge);
 	}
 	else {
-		printf("%d", count_heads);
+		printf("No crash");
 	}
 	return EXIT_SUCCESS;
 }
